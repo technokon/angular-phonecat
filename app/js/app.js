@@ -8,8 +8,12 @@ var phonecatApp = angular.module('phonecatApp', [
 
   'phonecatControllers',
   'phonecatFilters',
-  'phonecatServices'
+  'phonecatServices',
+  'ngFileUpload'
 ]);
+
+// lodash support
+phonecatApp.constant('_', window._);
 
 phonecatApp.config(['$routeProvider',
   function($routeProvider) {
@@ -23,6 +27,11 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/phone-detail.html',
         controller: 'PhoneDetailCtrl',
         controllerAs: 'phDetCtrl'
+      }).
+      when('/newPhone', {
+        templateUrl: 'partials/phone-form.html',
+        controller: 'NewPhoneCtrl',
+        controllerAs: 'vm'
       }).
       otherwise({
         redirectTo: '/phones'

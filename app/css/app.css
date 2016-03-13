@@ -1,107 +1,109 @@
 /* app css stylesheet */
 
 body {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
-
 .phone-images {
-  background-color: white;
-  width: 450px;
-  height: 450px;
-  overflow: hidden;
-  position: relative;
-  float: left;
+    background-color: white;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    float: left;
 }
 
 .phones {
-  list-style: none;
+    list-style: none;
 }
 
 .thumb {
-  float: left;
-  margin: -0.5em 1em 1.5em 0;
-  padding-bottom: 1em;
-  height: 100px;
-  width: 100px;
+    float: left;
+    margin: -0.5em 1em 1.5em 0;
+    padding-bottom: 1em;
+    height: 100px;
+    width: 100px;
 }
 
 .phones li {
-  clear: both;
-  height: 115px;
-  padding-top: 15px;
+    clear: both;
+    height: 115px;
+    padding-top: 15px;
 }
 
 /** Detail View **/
 img.phone {
-  float: left;
-  margin-right: 3em;
-  margin-bottom: 2em;
-  background-color: white;
-  padding: 2em;
-  height: 400px;
-  width: 400px;
-  display: none;
+    float: left;
+    margin-right: 3em;
+    margin-bottom: 2em;
+    background-color: white;
+    padding: 2em;
+    height: 400px;
+    width: 400px;
+    display: none;
 }
 
 img.phone:first-child {
-  display: block;
+    display: block;
 }
 
-
 ul.phone-thumbs {
-  margin: 0;
-  list-style: none;
+    margin: 0;
+    list-style: none;
 }
 
 ul.phone-thumbs li {
-  border: 1px solid black;
-  display: inline-block;
-  margin: 1em;
-  background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 1em;
+    background-color: white;
 }
 
 ul.phone-thumbs img {
-  height: 100px;
-  width: 100px;
-  padding: 1em;
+    height: 100px;
+    width: 100px;
+    padding: 1em;
 }
 
 ul.phone-thumbs img:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-
 ul.specs {
-  clear: none;
-  margin: 10px;
-  padding: 10px;
-  list-style: none;
+    clear: none;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
 
-  -moz-box-shadow: 0 0 10px black;
-  -webkit-box-shadow: 0 0 10px black;
-  box-shadow: 0 0 10px black;
+    -moz-box-shadow: 0 0 10px black;
+    -webkit-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
 }
 
 div.nav {
-  padding: 10px;
+    padding: 10px;
+}
+.nav2 {
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-ul.specs > li{
-  display: inline-block;
-  width: 200px;
-  vertical-align: top;
+ul.specs > li {
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
 }
 
-ul.specs > li > span{
-  font-weight: bold;
-  font-size: 1.2em;
+ul.specs > li > span {
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 ul.specs dt {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 h1 {
-  border-bottom: 1px solid gray;
+    border-bottom: 1px solid gray;
 }

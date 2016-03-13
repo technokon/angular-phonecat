@@ -1,0 +1,194 @@
+<div class="container-fluid">
+    <form role="form">
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" ng-model="vm.phone.name">
+        </div>
+
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="description" ng-model="vm.phone.description">
+        </div>
+
+        <div class="form-group">
+            <!-- many can be added -->
+            <legend>Availability and Networks</legend>
+
+            <label for="availability">Availability:</label>
+            <input type="text" class="form-control" id="availability" ng-model="provider">
+
+            <div class="nav2"><button type="button" ng-click="vm.pushItem(vm.phone.availability, provider);provider=null;" class="btn btn-info">Add Provider</button></div>
+            <p ng-repeat="provider in vm.phone.availability">
+                {{provider}}
+                <a href="" ng-click="vm.pullItem(vm.phone.availability, provider);"><span class="glyphicon glyphicon-remove"></span></a>
+            </p>
+        </div>
+
+        <div class="form-group">
+            <legend>Battery</legend>
+
+            <label for="batteryType">Type:</label>
+            <input type="text" class="form-control" id="batteryType" ng-model="vm.phone.battery.type">
+
+            <label for="batteryTalkTime">Talk time:</label>
+            <input type="text" class="form-control" id="batteryTalkTime" ng-model="vm.phone.battery.talkTime">
+
+
+            <label for="batteryStandByTime">Stand by time:</label>
+            <input type="text" class="form-control" id="batteryStandByTime" ng-model="vm.phone.battery.standbyTime">
+
+        </div>
+
+        <div class="form-group">
+            <legend>Storage and Memory</legend>
+
+            <label for="ram">RAM:</label>
+            <input type="text" class="form-control" id="ram" ng-model="vm.phone.storage.ram">
+
+            <label for="internalStorage">Internal Storage:</label>
+            <input type="text" class="form-control" id="internalStorage" ng-model="vm.phone.storage.flash">
+        </div>
+
+        <div class="form-group">
+            <legend>Connectivity</legend>
+
+            <label for="connectivityCell">Network Support:</label>
+            <input type="text" class="form-control" id="connectivityCell" ng-model="vm.phone.connectivity.cell">
+
+            <label for="connectivityWifi">WiFi:</label>
+            <input type="text" class="form-control" id="connectivityWifi" ng-model="vm.phone.connectivity.wifi">
+
+            <label for="connectivityBt">Bluetooth:</label>
+            <input type="text" class="form-control" id="connectivityBt" ng-model="vm.phone.connectivity.bluetooth">
+
+            <label for="connectivityInfra">Infrared:</label>
+            <input type="text" class="form-control" id="connectivityInfra"
+                   ng-model="vm.phone.connectivity.infrared">
+
+            <label for="connectivityGps">GPS:</label>
+            <input type="text" class="form-control" id="connectivityGps" ng-model="vm.phone.connectivity.gps">
+
+        </div>
+
+        <div class="form-group">
+            <legend>Android</legend>
+
+            <label for="os">OS Version:</label>
+            <input type="text" class="form-control" id="os" ng-model="vm.phone.android.os">
+
+            <label for="androidUi">Internal Storage:</label>
+            <input type="text" class="form-control" id="androidUi" ng-model="vm.phone.android.ui">
+        </div>
+
+        <div class="form-group">
+            <legend>Size and Weight</legend>
+
+            <!-- multiple -->
+            <label for="dimensions">Dimensions:</label>
+            <input type="text" class="form-control" id="dimensions" ng-model="dimension">
+
+            <div class="nav2"><button type="button" ng-click="vm.pushItem(vm.phone.sizeAndWeight.dimensions, dimension);dimension=null;" class="btn btn-info">Add Dimension</button></div>
+            <p ng-repeat="dimension in vm.phone.sizeAndWeight.dimensions">
+                {{dimension}}
+                <a href="" ng-click="vm.pullItem(vm.phone.sizeAndWeight.dimensions, dimension);"><span class="glyphicon glyphicon-remove"></span></a>
+            </p>
+
+            <label for="weigth">Weight:</label>
+            <input type="text" class="form-control" id="weigth" ng-model="vm.phone.sizeAndWeight.weight">
+        </div>
+
+        <div class="form-group">
+            <legend>Display</legend>
+
+            <label for="scrnSize">Screen size:</label>
+            <input type="text" class="form-control" id="scrnSize" ng-model="vm.phone.display.screenSize">
+
+            <label for="scrnResolution">Screen resolution:</label>
+            <input type="text" class="form-control" id="scrnResolution"
+                   ng-model="vm.phone.display.screenResolution">
+
+            <div class="checkbox">
+                <label for="touchScreen">Touch screen:</label><!-- touch screen checkmark -->
+                <input type="checkbox" id="touchScreen" ng-model="vm.phone.display.touchScreen">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <legend>Hardware</legend>
+
+            <label for="cpu">CPU:</label>
+            <input type="text" class="form-control" id="cpu" ng-model="vm.phone.hardware.cpu">
+
+            <label for="usb">USB:</label>
+            <input type="text" class="form-control" id="usb" ng-model="vm.phone.hardware.usb">
+
+            <label for="audioJack">Audio / headphone jack:</label>
+            <input type="text" class="form-control" id="audioJack" ng-model="vm.phone.hardware.audioJack">
+
+            <div class="checkbox">
+                <label for="fmRadio">FM Radio:</label>
+                <input type="checkbox" id="fmRadio" ng-model="vm.phone.hardware.fmRadio">
+            </div>
+
+            <div class="checkbox">
+                <label for="accelerometer">Accelerometer</label>
+                <input type="checkbox" id="accelerometer" ng-model="vm.phone.hardware.accelerometer">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <legend>Camera</legend>
+
+            <label for="cameraPri">Primary:</label>
+            <input type="text" class="form-control" id="cameraPri" ng-model="vm.phone.camera.primary">
+
+            <label for="cameraFeat">Features:</label><!-- many -->
+            <input type="text" class="form-control" id="cameraFeat" ng-model="camFeature">
+
+            <div class="nav2"><button type="button" ng-click="vm.pushItem(vm.phone.camera.features, camFeature);camFeature=null;" class="btn btn-info">Add Feature</button></div>
+            <p ng-repeat="feature in vm.phone.camera.features">
+                {{feature}}
+                <a href="" ng-click="vm.pullItem(vm.phone.camera.features, feature);"><span class="glyphicon glyphicon-remove"></span></a>
+            </p>
+        </div>
+
+        <div class="form-group">
+            <legend>Additional Features</legend>
+
+            <label for="additFeat">Additional Features:</label>
+            <input type="text" class="form-control" id="additFeat" ng-model="vm.phone.additionalFeatures">
+        </div>
+
+        <div class="form-group">
+            <legend>Images</legend>
+
+            <label for="uploadFilesButton">Upload images:</label>
+            <button id="uploadFilesButton" class="btn btn-success" ngf-select="vm.uploadFiles($files)" multiple accept="image/*">Select Files</button>
+            <br>
+            <br>Files:
+            <ul>
+                <li ng-repeat="f in vm.files" style="font:smaller">
+                    {{f.name}}
+                    <br />
+                    <img ngf-thumbnail="f || '/' + f.name + '-thumb.jpg'" ngf-size="{width: 100, height: 100, quality: 0.9}">
+                </li>
+            </ul>
+
+            <div class="progress" ng-show="vm.showProgress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                     aria-valuemin="0" aria-valuemax="100" style="width:{{vm.progress}}%" ng-bind="vm.progress + '%'">
+                    <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
+            <button type="button" ng-click="vm.abortUploading()" ng-show="vm.showProgress" class="btn btn-default">Cancel Upload</button>
+            {{errorMsg}}
+        </div>
+
+        <div class="nav">
+            <button type="button" ng-click="vm.savePhone()" class="btn btn-success">Save</button>
+            <button type="button" ng-click="vm.cancel()" class="btn btn-default">Cancel</button>
+        </div>
+    </form>
+</div>
